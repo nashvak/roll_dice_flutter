@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'diceroller.dart';
+
 const startAlignment = Alignment.topRight;
 const endAlignment = Alignment.bottomRight;
 
 class Home extends StatelessWidget {
   const Home({super.key, required this.colors});
   final List<Color> colors;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,6 +19,7 @@ class Home extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
+      child: const Center(child: DiceRoller()),
     );
   }
 }
